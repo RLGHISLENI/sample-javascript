@@ -16,7 +16,5 @@ const resultado = notas.filter(notasAprovadas);
 console.log(resultado);
 
 // Outra maneira de obter o mesmo resultado usando Arrow-function direto
-const mesmoResultado = notas.filter(n => {
-  return n >= mediaAprovacao;
-});
+const mesmoResultado = notas.filter(n => n >= mediaAprovacao);
 console.log(mesmoResultado);

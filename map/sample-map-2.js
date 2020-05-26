@@ -36,3 +36,9 @@ const obterCusto = precoComDesconto => {
 // Execução da function map mais de uma vez (primeiro calcula o desconto e depois obtem o custo final)
 const custoFinal = produtos.map(descontoProdutoSimples).map(obterCusto);
 console.log(custoFinal);
+
+// Outra maneira de realizar esta operção usando Arrow-function direto
+// Menos verboso e mais expressivo - Utilizado somente para funcões pequenas
+const custoFinalDireto = produtos
+  .map(p => p.preco - (p.preco * p.desconto) / 100)
+  .map(c => c * 0.34);

@@ -12,7 +12,5 @@ const resultado = numeros.reduce(somar);
 console.log(resultado);
 
 // Outra maneira de realizar esta operação
-const mesmoResultado = numeros.reduce((a, b) => {
-  return a + b;
-});
+const mesmoResultado = numeros.reduce((a, b) => a + b);
 console.log(mesmoResultado);

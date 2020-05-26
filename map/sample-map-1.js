@@ -21,3 +21,7 @@ console.log(resultado);
 // Mostrar o resultado DEPOIS de executar a Arrow-Function dobrarSimples()
 const resultadoSimples = numeros.map(dobrarSimples);
 console.log(resultadoSimples);
+
+// Outra maneira de obter o mesmo resultado mas direto com uma Arrow-function
+const mesmoResultado = numeros.map(n => n * 2);
+console.log(mesmoResultado);
