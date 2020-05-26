@@ -27,3 +27,18 @@ const valorFinal = numeros.reduce(media, valorInicial);
 
 // Mostra média total
 console.log(valorFinal.media);
+
+// ***** Ourta maneira de escrever este bloco de código *****
+// Menos verbosa mas de difícil leitura para o dev
+
+const mediaFinal = numeros.reduce(
+  (ac, n) => {
+    return {
+      total: ac.total + n,
+      qtd: ac.qtd + 100,
+      media: (ac.total + n) / (ac.qtd + 100)
+    };
+  },
+  { total: 0, qtd: 0, media: 0 }
+).media;
+console.log(mediaFinal);

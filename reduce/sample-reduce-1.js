@@ -9,6 +9,10 @@ const somar = (a, b) => {
 
 // Aplica a function reduce
 const resultado = numeros.reduce(somar);
-
-// Mostra a soma todal
 console.log(resultado);
+
+// Outra maneira de realizar esta operação
+const mesmoResultado = numeros.reduce((a, b) => {
+  return a + b;
+});
+console.log(mesmoResultado);

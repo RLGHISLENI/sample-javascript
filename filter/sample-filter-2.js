@@ -7,18 +7,18 @@ const produtos = [
 ];
 console.log(produtos);
 
-// Arrow-function para calcular o preço dos produtos com desconto
-const descontoProduto = p => {
-  return p.preco - (p.preco * p.desconto) / 100;
-};
-
 // Arrow-function com critério de filtro para descontos acima de 10%
-const maioresDesconto = p => {
+const produtoComMaiorDesconto = p => {
   return p.desconto >= 10;
 };
 
-// Mostrar o resultado DEPOIS de executar o filtro a function descontoProduto()
+// Arrow-function para calcular o preço dos produtos com desconto
+const precoProdutoComDesconto = p => {
+  return p.preco - (p.preco * p.desconto) / 100;
+};
+
+// Mostrar o resultado DEPOIS de executar o filter e map
 const precosComMaioresDesconto = produtos
-  .filter(maioresDesconto)
-  .map(descontoProduto);
+  .filter(produtoComMaiorDesconto)
+  .map(precoProdutoComDesconto);
 console.log(precosComMaioresDesconto);

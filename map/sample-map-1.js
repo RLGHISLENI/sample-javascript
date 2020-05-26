@@ -18,6 +18,6 @@ const dobrarSimples = n => {
 const resultado = numeros.map(dobrar);
 console.log(resultado);
 
-// // Mostrar o resultado DEPOIS de executar a Arrow-Function dobrarSimples()
+// Mostrar o resultado DEPOIS de executar a Arrow-Function dobrarSimples()
 const resultadoSimples = numeros.map(dobrarSimples);
 console.log(resultadoSimples);

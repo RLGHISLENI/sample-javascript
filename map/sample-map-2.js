@@ -28,10 +28,10 @@ console.log(precosComDesconto);
 const precosSimples = produtos.map(descontoProdutoSimples);
 console.log(precosSimples);
 
-// Function para calcular o custo final do produto com desconto
-function obterCusto(precoComDesconto) {
+// Arrow-function para calcular o custo final do produto com desconto
+const obterCusto = precoComDesconto => {
   return parseFloat(precoComDesconto * 0.34);
-}
+};
 
 // Execução da function map mais de uma vez (primeiro calcula o desconto e depois obtem o custo final)
 const custoFinal = produtos.map(descontoProdutoSimples).map(obterCusto);
